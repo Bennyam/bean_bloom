@@ -88,7 +88,7 @@ function Navbar() {
               Contact
             </Button>
             <Button href="#footer" variant="solidDark" onClick={openHandler}>
-              Contact
+              Kom Langs
             </Button>
           </div>
         </div>

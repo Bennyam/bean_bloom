@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-taupe-50 overflow-x-hidden;
+  }
+
+  h3 {
+    @apply text-4xl text-taupe-700 font-bold text-center;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply font-sans;
+}
+
+.bg-image {
+  background-color: rgb(71, 60, 57);
+}
+
+@media (min-width: 64rem) {
+  .bg-image {
+    background:
+      linear-gradient(to right, transparent 15%, rgba(71, 60, 57, 0.97) 50%),
+      url("../img/contact-img2.jpg");
+    background-size: cover;
+  }
+}
+
+/* Hameburger menu */
+.hamburger {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  height: 3px;
+  width: 23px;
+  background-color: rgb(251, 250, 249);
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
